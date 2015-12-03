@@ -1,57 +1,65 @@
-package kpp;	//Eine Zusammenarbeit von Piasecki,Pawlik,Kopanski
+package kpp; //Eine Zusammenarbeit von Piasecki,Pawlik,Kopanski
 
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * @author Martin Piasecki
+ *
+ */
 public class Klasse3 {
-	//Attribute
+	// Attribute
 	private ArrayList<Integer> list;
-	
+
 	/**
 	 * Initialisiert die Werte (Konstruktor)
 	 */
-	public Klasse3(){
+	public Klasse3() {
 		list = new ArrayList<Integer>();
 	}
-	
+
 	/**
 	 * Added Zahlen zur Liste
+	 * 
 	 * @param i
 	 */
-	public void add(int i){
+	public void add(int i) {
 		list.add(i);
 	}
-	
+
 	/**
 	 * Gibt das Maximum von beliebig vielen Werten zurück.
+	 * 
 	 * @param list
 	 * @return
 	 */
-	public int Max(ArrayList<Integer> list){
+	public int max() {
 		Collections.sort(list);
-		return list.get(list.size());
+		return list.get(list.size() - 1);
 	}
-	
+
 	/**
 	 * Gibt das Minimum von beliebig vielen Werten zurück.
+	 * 
 	 * @param list
 	 * @return
 	 */
-	public int Min(){
+	public int min() {
 		Collections.sort(list);
 		return list.get(0);
 	}
-	
+
 	/**
 	 * Summiert das Minimum und das Maximum
+	 * 
 	 * @param min
 	 * @param max
 	 * @return
 	 */
-	public int Summe() {
+	public int summe() {
 		Collections.sort(list);
-		int summe = list.get(0)+list.get(list.size());
+		int summe = list.get(0) + list.get(list.size() - 1);
 		return summe;
 	}
-	
+
 }
